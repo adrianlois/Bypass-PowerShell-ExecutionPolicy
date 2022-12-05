@@ -94,7 +94,7 @@ PowerShell.exe -EncodedCommand $encodedCommand
 ```
 Comando corto usando directamente la cadena codificada en Base64
 
-- -enc: EncodedCommand
+- -enc: EncodedCommand (descodifica un comando de PowerShell desde un proceso en ejecución)
 ```ps
 PowerShell.exe -enc VwByAGkAdABlAC0ASABvAHMAdAAgACIARQBzAHQAbwAgAGUAcwAgAHUAbgAgAGIAeQBwAGEAcwBzACAAZABlACAAUABTACAARQB4AGUAYwB1AHQAaQBvAG4AIABQAG8AbABpAGMAeQAiAA==
 ```
@@ -121,8 +121,9 @@ Function Disable-ExecutionPolicy {($ctx = $executionContext.GetType().GetField("
 ### 8. Utilizar el flag "Bypass" de política de ejecución.
 ```ps
 PowerShell.exe -ExecutionPolicy Bypass -File .\BypassEP.ps1
+PowerShell.exe -exec Bypass -File .\BypassEP.ps1
 ```
-- -ExecutionPolicy Bypass o –Exec BypassBypass: omitir/ignora la política de ejecución como Restringido, que restringe la ejecución de los scripts de PowerShell.
+- -ExecutionPolicy Bypass o –exec BypassBypass: omitir/ignora la política de ejecución como Restringido, que restringe la ejecución de los scripts de PowerShell.
 ![8_bypass_ps_executionpolicy](screenshots/8_bypass_ps_executionpolicy.png)
 
 
