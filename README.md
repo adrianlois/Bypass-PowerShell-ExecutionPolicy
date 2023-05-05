@@ -55,7 +55,7 @@ Cada una de estas políticas puede aplicarse a diferentes ámbitos para controla
 
 # Bypass PowerShell Execution Policy - Varias formas de eludir la política de ejecución de PowerShell
 
-### 1. Copiar y pegar el script o cargar las funciones directamente en una consola interactiva de PowerShell
+#### 1. Copiar y pegar el script o cargar las funciones directamente en una consola interactiva de PowerShell
 ![1_bypass_ps_executionpolicy](screenshots/1_bypass_ps_executionpolicy.png)
 
 
