@@ -42,13 +42,13 @@ Para controlar la validación de los scripts y cmdlets, se utiliza el cmdlet *Se
 
 Cada una de estas políticas puede aplicarse a diferentes ámbitos para controlar a quién afectan, esto se especifica con el parámetro *-Scope*:
 
+[Get-ExecutionPolicy](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.2)
+
 - **MachinePolicy**: La política de ejecución se establece por una Política de Grupo para todos los usuarios.
 - **UserPolicy**: La política de ejecución se establece por una Política de Grupo para el usuario actual.
 - **Process**: La política de ejecución se establece para el proceso actual de Windows PowerShell.
 - **CurrentUser**: La política de ejecución se establece para el usuario actual.
 - **LocalMachine**: La política de ejecución se establece para todos los usuarios.
-
-[Get-ExecutionPolicy](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.2)
 
 ![get_bypass_ps_executionpolicy](screenshots/get_bypass_ps_executionpolicy.png)
 
