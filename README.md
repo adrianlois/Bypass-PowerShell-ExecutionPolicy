@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="screenshots/bypass-powershell-executionpolicy-logo.png" alt="Bypass PowerShell Execution Policy" width="500">
+  <img src="screenshots/bypass-powershell-executionpolicy-logo.png" alt="Bypass PowerShell Execution Policy" width="520">
   <br>
   Bypass PowerShell Execution Policy
 </h1>
