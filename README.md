@@ -1,6 +1,10 @@
-# Bypass PowerShell ExecutionPolicy
+<h1 align="center">
+  <img src="screenshots/bypass-powershell-executionpolicy-logo.png" alt="Bypass PowerShell Execution Policy" width="450">
+  <br>
+  Bypass PowerShell Execution Policy
+</h1>
 
-## Política de ejecución PowerShell - Explicación
+## Explicación de la política de ejecución PowerShell
 
 La configuración de seguridad por defecto establecidas en PowerShell:
 
@@ -54,7 +58,7 @@ Para obtener las directivas de ejecución de la sesión actual.
 ![get_bypass_ps_executionpolicy](screenshots/get_bypass_ps_executionpolicy.png)
 
 
-# Bypass PowerShell Execution Policy - Varias formas de eludir la política de ejecución de PowerShell
+# Bypass PowerShell Execution Policy: Varias formas de eludir la política de ejecución de PowerShell
 
 ### 1. Copiar y pegar el script o cargar las funciones directamente en una consola interactiva de PowerShell
 ![1_bypass_ps_executionpolicy](screenshots/1_bypass_ps_executionpolicy.png)
