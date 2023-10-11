@@ -1,7 +1,7 @@
+<h1 align="center">Bypass PowerShell Execution Policy</h1>
+
 <h1 align="center">
   <img src="screenshots/logo_bypass_powershell_executionpolicy.png" alt="Bypass PowerShell Execution Policy" width="520">
-  <br>
-  Bypass PowerShell Execution Policy
 </h1>
 
 ## Explicación de la política de ejecución PowerShell
