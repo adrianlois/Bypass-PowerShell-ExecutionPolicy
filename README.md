@@ -7,8 +7,8 @@
 <h1>Índice</h1>
 
 - [📝 Explicación de la política de ejecución PowerShell](#-explicación-de-la-política-de-ejecución-powershell)
-- [⚙️ Modos de la política de ejecución (ExecutionPolicy)](#️-modos-de-la-política-de-ejecución-executionpolicy)
-  - [Tipos de ámbitos de la política de ejecución (Scopes)](#tipos-de-ámbitos-de-la-política-de-ejecución-scopes)
+- [⚙️ Modos de la política de ejecución (-ExecutionPolicy)](#️-modos-de-la-política-de-ejecución--executionpolicy)
+  - [Tipos de ámbitos de la política de ejecución (-Scope)](#tipos-de-ámbitos-de-la-política-de-ejecución--scope)
 - [⚡ Bypass PowerShell Execution Policy: Varias formas de eludir la política de ejecución de PowerShell](#-bypass-powershell-execution-policy-varias-formas-de-eludir-la-política-de-ejecución-de-powershell)
   - [1. Copiar y pegar el script o cargar las funciones directamente en una consola interactiva de PowerShell](#1-copiar-y-pegar-el-script-o-cargar-las-funciones-directamente-en-una-consola-interactiva-de-powershell)
   - [2. Leer la secuencia de comandos de un archivo y canalizar la salida a una entrada estándar de PowerShell](#2-leer-la-secuencia-de-comandos-de-un-archivo-y-canalizar-la-salida-a-una-entrada-estándar-de-powershell)
@@ -51,7 +51,7 @@ Microsoft puso mucho cuidado y atención en minimizar la superficie de ataque de
 ![script_bypass_ps_executionpolicy](screenshots/script_bypass_ps_executionpolicy.png)
 
 
-## ⚙️ Modos de la política de ejecución (ExecutionPolicy)
+## ⚙️ Modos de la política de ejecución (-ExecutionPolicy)
 
 Para controlar la validación de los scripts y cmdlets se utiliza [*Set-ExecutionPolicy*](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.security/set-executionpolicy) especificando el parámetro [*-ExecutionPolicy*](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
 
@@ -60,7 +60,7 @@ Para controlar la validación de los scripts y cmdlets se utiliza [*Set-Executio
 - **RemoteSigned**: Todos los scripts remotos (rutas UNC) o descargados necesitan estar firmados.
 - **Unrestricted**: No es necesario firmar ningún script, todas las restricciones anteriores estarían deshabilitadas.
 
-### Tipos de ámbitos de la política de ejecución (Scopes)
+### Tipos de ámbitos de la política de ejecución (-Scope)
 
 Cada una de estas políticas puede aplicarse a diferentes ámbitos para controlar a quién afectan. Esto se especifica con el parámetro [*-Scope*](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.core/about/about_execution_policies#execution-policy-scope).
 
