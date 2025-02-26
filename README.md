@@ -6,10 +6,10 @@
 
 <h1>Índice</h1>
 
-- [Explicación de la política de ejecución PowerShell](#explicación-de-la-política-de-ejecución-powershell)
-- [Modos de la política de ejecución (ExecutionPolicy)](#modos-de-la-política-de-ejecución-executionpolicy)
+- [📝 Explicación de la política de ejecución PowerShell](#-explicación-de-la-política-de-ejecución-powershell)
+- [⚙️ Modos de la política de ejecución (ExecutionPolicy)](#️-modos-de-la-política-de-ejecución-executionpolicy)
   - [Tipos de ámbitos de la política de ejecución (Scopes)](#tipos-de-ámbitos-de-la-política-de-ejecución-scopes)
-- [Bypass PowerShell Execution Policy: Varias formas de eludir la política de ejecución de PowerShell](#bypass-powershell-execution-policy-varias-formas-de-eludir-la-política-de-ejecución-de-powershell)
+- [⚡ Bypass PowerShell Execution Policy: Varias formas de eludir la política de ejecución de PowerShell](#-bypass-powershell-execution-policy-varias-formas-de-eludir-la-política-de-ejecución-de-powershell)
   - [1. Copiar y pegar el script o cargar las funciones directamente en una consola interactiva de PowerShell](#1-copiar-y-pegar-el-script-o-cargar-las-funciones-directamente-en-una-consola-interactiva-de-powershell)
   - [2. Leer la secuencia de comandos de un archivo y canalizar la salida a una entrada estándar de PowerShell](#2-leer-la-secuencia-de-comandos-de-un-archivo-y-canalizar-la-salida-a-una-entrada-estándar-de-powershell)
   - [3. Leer la secuencia de comandos de un archivo y canalizarla al comando Invoke-Expression](#3-leer-la-secuencia-de-comandos-de-un-archivo-y-canalizarla-al-comando-invoke-expression)
@@ -24,7 +24,7 @@
   - [12. Establecer la ExecutionPolicy para el ámbito del usuario actual a través del Registro de Windows](#12-establecer-la-executionpolicy-para-el-ámbito-del-usuario-actual-a-través-del-registro-de-windows)
 
 
-## Explicación de la política de ejecución PowerShell
+## 📝 Explicación de la política de ejecución PowerShell
 
 La configuración de seguridad por defecto establecidas en PowerShell:
 
@@ -51,11 +51,9 @@ Microsoft puso mucho cuidado y atención en minimizar la superficie de ataque de
 ![script_bypass_ps_executionpolicy](screenshots/script_bypass_ps_executionpolicy.png)
 
 
-## Modos de la política de ejecución (ExecutionPolicy)
+## ⚙️ Modos de la política de ejecución (ExecutionPolicy)
 
-Para controlar la validación de los scripts y cmdlets, se utiliza el cmdlet *Set-ExecutionPolicy*. Hay varias políticas que se pueden utilizar:
-
-[Set-ExecutionPolicy](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2)
+Para controlar la validación de los scripts y cmdlets se utiliza [*Set-ExecutionPolicy*](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.security/set-executionpolicy) especificando el parámetro [*-ExecutionPolicy*](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
 
 - **Restricted**: No se puede ejecutar ningún script local, remoto o descargado en el sistema.
 - **AllSigned**: Todas las secuencias de comandos que se ejecuten deben estar firmadas digitalmente por un usuario o entidad de confianza.
@@ -64,7 +62,7 @@ Para controlar la validación de los scripts y cmdlets, se utiliza el cmdlet *Se
 
 ### Tipos de ámbitos de la política de ejecución (Scopes)
 
-Cada una de estas políticas puede aplicarse a diferentes ámbitos para controlar a quién afectan, esto se especifica con el parámetro *-Scope*:
+Cada una de estas políticas puede aplicarse a diferentes ámbitos para controlar a quién afectan. Esto se especifica con el parámetro [*-Scope*](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.core/about/about_execution_policies#execution-policy-scope).
 
 - **MachinePolicy**: La política de ejecución se establece por una Política de Grupo para todos los usuarios.
 - **UserPolicy**: La política de ejecución se establece por una Política de Grupo para el usuario actual.
@@ -72,14 +70,13 @@ Cada una de estas políticas puede aplicarse a diferentes ámbitos para controla
 - **CurrentUser**: La política de ejecución se establece para el usuario actual.
 - **LocalMachine**: La política de ejecución se establece para todos los usuarios.
 
-Para obtener las directivas de ejecución de la sesión actual. 
-[Get-ExecutionPolicy](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.2)
+Para obtener las directivas de ejecución de la sesión actual se puede comprobar con [*Get-ExecutionPolicy*](https://learn.microsoft.com/es-es/powershell/module/microsoft.powershell.security/get-executionpolicy)
 
 ![get_bypass_ps_executionpolicy](screenshots/get_bypass_ps_executionpolicy.png)
 
 ---
 
-## Bypass PowerShell Execution Policy: Varias formas de eludir la política de ejecución de PowerShell
+## ⚡ Bypass PowerShell Execution Policy: Varias formas de eludir la política de ejecución de PowerShell
 
 ### 1. Copiar y pegar el script o cargar las funciones directamente en una consola interactiva de PowerShell
 ![1_bypass_ps_executionpolicy](screenshots/1_bypass_ps_executionpolicy.png)
