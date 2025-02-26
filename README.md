@@ -4,6 +4,26 @@
   <img src="screenshots/logo_bypass_powershell_executionpolicy.png" alt="Bypass PowerShell Execution Policy" width="520">
 </div>
 
+<h1>Índice</h1>
+
+- [Explicación de la política de ejecución PowerShell](#explicación-de-la-política-de-ejecución-powershell)
+- [Modos de la política de ejecución (ExecutionPolicy)](#modos-de-la-política-de-ejecución-executionpolicy)
+  - [Tipos de ámbitos de la política de ejecución (Scopes)](#tipos-de-ámbitos-de-la-política-de-ejecución-scopes)
+- [Bypass PowerShell Execution Policy: Varias formas de eludir la política de ejecución de PowerShell](#bypass-powershell-execution-policy-varias-formas-de-eludir-la-política-de-ejecución-de-powershell)
+  - [1. Copiar y pegar el script o cargar las funciones directamente en una consola interactiva de PowerShell](#1-copiar-y-pegar-el-script-o-cargar-las-funciones-directamente-en-una-consola-interactiva-de-powershell)
+  - [2. Leer la secuencia de comandos de un archivo y canalizar la salida a una entrada estándar de PowerShell](#2-leer-la-secuencia-de-comandos-de-un-archivo-y-canalizar-la-salida-a-una-entrada-estándar-de-powershell)
+  - [3. Leer la secuencia de comandos de un archivo y canalizarla al comando Invoke-Expression](#3-leer-la-secuencia-de-comandos-de-un-archivo-y-canalizarla-al-comando-invoke-expression)
+  - [4. Usar el parámetro ScriptBlock con Invoke-Command donde se lee el script desde un archivo y se canaliza a Invoke-Expression](#4-usar-el-parámetro-scriptblock-con-invoke-command-donde-se-lee-el-script-desde-un-archivo-y-se-canaliza-a-invoke-expression)
+  - [5. Utilizar el parámetro EncodeCommand codificando el script en Base64 para evitar una posible detección por parte de los motores de AVs](#5-utilizar-el-parámetro-encodecommand-codificando-el-script-en-base64-para-evitar-una-posible-detección-por-parte-de-los-motores-de-avs)
+  - [6. Descargar el script desde una URL y ejecutarlo con Invoke-Expression](#6-descargar-el-script-desde-una-url-y-ejecutarlo-con-invoke-expression)
+  - [7. Desactivar la ExecutionPolicy cambiando el AuthorizationManager](#7-desactivar-la-executionpolicy-cambiando-el-authorizationmanager)
+  - [8. Utilizar el flag "Bypass" de política de ejecución.](#8-utilizar-el-flag-bypass-de-política-de-ejecución)
+  - [9. Utilizar el flag "Unrestricted" de política de ejecución.](#9-utilizar-el-flag-unrestricted-de-política-de-ejecución)
+  - [10. Establecer la ExecutionPolicy para el ámbito del proceso](#10-establecer-la-executionpolicy-para-el-ámbito-del-proceso)
+  - [11. Establecer la ExecutionPolicy para el ámbito del usuario actual](#11-establecer-la-executionpolicy-para-el-ámbito-del-usuario-actual)
+  - [12. Establecer la ExecutionPolicy para el ámbito del usuario actual a través del Registro de Windows](#12-establecer-la-executionpolicy-para-el-ámbito-del-usuario-actual-a-través-del-registro-de-windows)
+
+
 ## Explicación de la política de ejecución PowerShell
 
 La configuración de seguridad por defecto establecidas en PowerShell:
@@ -57,8 +77,9 @@ Para obtener las directivas de ejecución de la sesión actual.
 
 ![get_bypass_ps_executionpolicy](screenshots/get_bypass_ps_executionpolicy.png)
 
+---
 
-# Bypass PowerShell Execution Policy: Varias formas de eludir la política de ejecución de PowerShell
+## Bypass PowerShell Execution Policy: Varias formas de eludir la política de ejecución de PowerShell
 
 ### 1. Copiar y pegar el script o cargar las funciones directamente en una consola interactiva de PowerShell
 ![1_bypass_ps_executionpolicy](screenshots/1_bypass_ps_executionpolicy.png)
